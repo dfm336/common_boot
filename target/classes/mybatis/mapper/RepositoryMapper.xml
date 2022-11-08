@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dfm.boot.example.mappers.RepositoryMapper">
+  <resultMap id="BaseResultMap" type="com.dfm.boot.example.domain.Repository">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="issue_number" jdbcType="VARCHAR" property="issueNumber" />
+    <result column="issue_company" jdbcType="VARCHAR" property="issueCompany" />
+    <result column="issue_time" jdbcType="TIMESTAMP" property="issueTime" />
+    <result column="impl_time" jdbcType="TIMESTAMP" property="implTime" />
+    <result column="maturity_time" jdbcType="TIMESTAMP" property="maturityTime" />
+    <result column="add_type" jdbcType="TINYINT" property="addType" />
+    <result column="is_try" jdbcType="TINYINT" property="isTry" />
+    <result column="publish_content" jdbcType="VARCHAR" property="publishContent" />
+    <result column="biz_type" jdbcType="VARCHAR" property="bizType" />
+    <result column="audit_status" jdbcType="TINYINT" property="auditStatus" />
+    <result column="org_id" jdbcType="VARCHAR" property="orgId" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="lib_type" jdbcType="TINYINT" property="libType" />
+    <result column="issued_dept" jdbcType="VARCHAR" property="issuedDept" />
+    <result column="relation" jdbcType="VARCHAR" property="relation" />
+    <result column="try_end_time" jdbcType="TIMESTAMP" property="tryEndTime" />
+    <result column="cur_user" jdbcType="VARCHAR" property="curUser" />
+    <result column="share_range" jdbcType="TINYINT" property="shareRange" />
+    <result column="task_id" jdbcType="BIGINT" property="taskId" />
+    <result column="appendix" jdbcType="LONGVARCHAR" property="appendix" />
+    <result column="share_company" jdbcType="LONGVARCHAR" property="shareCompany" />
+    <result column="share_user" jdbcType="LONGVARCHAR" property="shareUser" />
+    <result column="share_user_tree" jdbcType="LONGVARCHAR" property="shareUserTree" />
+  </resultMap>
+</mapper>
