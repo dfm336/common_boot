@@ -35,4 +35,22 @@
     <result column="share_user" jdbcType="LONGVARCHAR" property="shareUser" />
     <result column="share_user_tree" jdbcType="LONGVARCHAR" property="shareUserTree" />
   </resultMap>
+
+
+  <select id="searchTitleByInstr" resultType="java.lang.String">
+    select  title from repository where  instr(title,#{title}) limit 5
+  </select>
+
+  <select id="searchTitle" resultType="java.lang.String">
+    select  title from repository where title like concat('%',#{title},'%') limit 5
+  </select>
+
+  <select id="searchTitleIndex" resultType="java.lang.String">
+    select  title from repository where title  like #{title} limit 5
+  </select>
+
+  <select id="searchTitleFullTextIndex" resultType="java.lang.String">
+    select  title from repository where  match(title)against(#{title}) limit 5
+  </select>
+
 </mapper>
