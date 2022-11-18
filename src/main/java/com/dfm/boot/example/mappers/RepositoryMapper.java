@@ -12,7 +12,7 @@ public interface RepositoryMapper extends IMapper<Repository> {
     List<String> searchTitleIndex(String title);
 
 
-    List<String> searchTitleFullTextIndex(String title);
+    List<Repository> searchTitleFullTextIndex(String title);
 
     List<String> searchTitleByInstr(String title);
 }

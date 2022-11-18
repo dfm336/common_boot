@@ -35,7 +35,10 @@ class ExampleApplicationTests {
      *   3w 数据  fulltext_title FULLTEXT KEY(title) 全文索引
      *      左右模糊  制度     723ms  (数据不准确）
      *
-     *  instr实现
+     *     - mysql 8.0   cost 536
+     *     - mysql 5.7  cost 677
+     *
+     *  instr 实现
      *  3w   全文索引 左右模糊， 907
      *      idx_title   1009
      *      idx_title limit 5   cost 751
@@ -45,9 +48,9 @@ class ExampleApplicationTests {
      */
     @Test
     public void searchTitle(){
-        String title = "制度";
+        String title = "物料";
         long start = System.currentTimeMillis();
-        List<String> list = repositoryMapper.searchTitleByInstr(title);
+        List<Repository> list = repositoryMapper.searchTitleFullTextIndex(title);
         long end = System.currentTimeMillis();
         log.info("cost :{}",end-start);
 

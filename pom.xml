@@ -144,7 +144,6 @@
                         <groupId>tk.mybatis</groupId>
                         <artifactId>mapper</artifactId>
                         <!--                        <version>4.0.3</version>-->
-                        <!-- TODO 楼宗： 为了使用generateColumnConsts特性，尝试升级，后续如有不兼容，退回4.0.3 -->
                         <version>4.1.5</version>
                     </dependency>
                 </dependencies>
