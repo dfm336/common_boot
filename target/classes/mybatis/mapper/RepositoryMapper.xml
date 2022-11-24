@@ -49,8 +49,8 @@
     select  title from repository where title  like #{title} limit 5
   </select>
 
-  <select id="searchTitleFullTextIndex" resultType="java.lang.String">
-    select  title from repository where  match(title)against(#{title}) limit 5
+  <select id="searchTitleFullTextIndex" resultMap="BaseResultMap">
+    select  title,id,add_type from repository where  match(title)against(#{title}) limit 5
   </select>
 
 </mapper>
