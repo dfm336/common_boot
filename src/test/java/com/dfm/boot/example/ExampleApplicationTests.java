@@ -10,7 +10,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
+import java.lang.management.ManagementFactory;
+import java.lang.management.RuntimeMXBean;
+import java.lang.management.ThreadMXBean;
 import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @SpringBootTest
@@ -22,6 +28,32 @@ class ExampleApplicationTests {
 
     @Resource
     private RepositoryMapper repositoryMapper;
+
+
+    public static void main(String[] args) throws InterruptedException {
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10, 20, 5, TimeUnit.SECONDS, new ArrayBlockingQueue<>(50));
+        RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();
+        String jvmName = runtimeMXBean.getName();
+        System.out.println("jvmName = " + jvmName);
+
+        String pidName = jvmName.split("@")[0];
+        long pid = Long.parseLong(pidName);
+
+        System.out.println("pid = " + pid);
+
+
+        ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
+        for (int i = 0; i < 20; i++) {
+            threadPoolExecutor.execute(()->{
+                System.out.println("当前线程总数为："+threadMXBean.getThreadCount());
+            });
+        }
+        threadPoolExecutor.shutdown();
+
+        Thread.sleep(1000);
+        System.out.println("线程总数为："+threadMXBean.getThreadCount());
+
+    }
 
     /**
      *  3k  数据。 idx_title key(title) 普通索引
