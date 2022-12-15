@@ -9,10 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.redisson.Redisson;
-import org.redisson.api.RBlockingDeque;
-import org.redisson.api.RDelayedQueue;
-import org.redisson.api.RList;
-import org.redisson.api.RedissonClient;
+import org.redisson.api.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,6 +32,22 @@ class RedissionTests {
 
     @Autowired
     DelayMessageFactory delayMessageFactory;
+
+    public static final String lock = "retryLock";
+
+
+    @Test
+    public void testDistributionLock(){
+        RLock lock = redissonClient.getLock(RedissionTests.lock);
+
+        // 1. 普通加锁
+//        lock.lock();
+        // 2. 加锁后，指定时间内 自动 unlock
+//        lock.lock(2000,TimeUnit.SECONDS);
+
+        //3. 尝试加锁
+//        lock.tryLock(2000,TimeUnit.SECONDS)
+    }
 
     @Test
     public void test() throws InterruptedException {
