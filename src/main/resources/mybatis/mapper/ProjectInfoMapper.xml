@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dfm.boot.example.mappers.ProjectInfoMapper">
+  <resultMap id="BaseResultMap" type="com.dfm.boot.example.domain.ProjectInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="project_name" jdbcType="VARCHAR" property="projectName" />
+    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="IRR" jdbcType="DECIMAL" property="irr" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="renter" jdbcType="VARCHAR" property="renter" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="credit_amount" jdbcType="DECIMAL" property="creditAmount" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+  </resultMap>
+</mapper>

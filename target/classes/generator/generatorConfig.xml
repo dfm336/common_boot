@@ -8,7 +8,7 @@
         <property name="useMapperCommentGenerator" value="true"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="cn.zswltech.gungnir.core.common.IMapper"/>
+            <property name="mappers" value="com.dfm.boot.example.mappers.IMapper"/>
             <property name="caseSensitive" value="true"/>
             <property name="forceAnnotation" value="true"/>
             <property name="beginningDelimiter" value=""/>
@@ -25,8 +25,7 @@
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/mybatis"/>
         <javaClientGenerator targetPackage="com.dfm.boot.example.mappers" targetProject="src/main/java" type="XMLMAPPER"/>
 
-<!--        <table tableName="gov_mapping" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
-        <table tableName="repository" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
+        <table tableName="project_info" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
 
 
 

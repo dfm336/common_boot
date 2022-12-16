@@ -1,11 +1,8 @@
 package com.dfm.boot.example.domain;
 
-import lombok.ToString;
-
 import java.util.Date;
 import javax.persistence.*;
 
-@ToString
 @Table(name = "repository")
 public class Repository {
     @Id
