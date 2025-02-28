@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dfm.boot.example.mappers.CylRosterAllMapper">
+  <resultMap id="BaseResultMap" type="com.dfm.boot.example.domain.CylRosterAll">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="org_code" jdbcType="VARCHAR" property="orgCode" />
+    <result column="org_name" jdbcType="VARCHAR" property="orgName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="contact_phone" jdbcType="VARCHAR" property="contactPhone" />
+    <result column="contact_name" jdbcType="VARCHAR" property="contactName" />
+    <result column="amount_count" jdbcType="VARCHAR" property="amountCount" />
+    <result column="invoicing_amount" jdbcType="VARCHAR" property="invoicingAmount" />
+    <result column="order_count" jdbcType="VARCHAR" property="orderCount" />
+    <result column="time_limit" jdbcType="VARCHAR" property="timeLimit" />
+    <result column="loan_rule" jdbcType="VARCHAR" property="loanRule" />
+    <result column="org_branch" jdbcType="VARCHAR" property="orgBranch" />
+    <result column="payment_total_3m" jdbcType="VARCHAR" property="paymentTotal3m" />
+    <result column="cash_payment_ratio_3m" jdbcType="VARCHAR" property="cashPaymentRatio3m" />
+    <result column="bank_note_ratio_3m" jdbcType="VARCHAR" property="bankNoteRatio3m" />
+    <result column="merchant_paper_ratio_3m" jdbcType="VARCHAR" property="merchantPaperRatio3m" />
+    <result column="cash_payment_ratio_12m" jdbcType="VARCHAR" property="cashPaymentRatio12m" />
+    <result column="bank_note_ratio_12m" jdbcType="VARCHAR" property="bankNoteRatio12m" />
+    <result column="merchant_paper_ratio_12m" jdbcType="VARCHAR" property="merchantPaperRatio12m" />
+    <result column="core_ent_type" jdbcType="TINYINT" property="coreEntType" />
+  </resultMap>
+</mapper>

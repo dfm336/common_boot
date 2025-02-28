@@ -8,7 +8,7 @@
         <property name="useMapperCommentGenerator" value="true"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="cn.zswltech.gungnir.core.common.IMapper"/>
+            <property name="mappers" value="com.dfm.boot.example.mappers.IMapper"/>
             <property name="caseSensitive" value="true"/>
             <property name="forceAnnotation" value="true"/>
             <property name="beginningDelimiter" value=""/>
@@ -18,16 +18,20 @@
         </plugin>
 
 
-        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" userId="root" password="ThinkSky@336"
-                        connectionURL="jdbc:mysql://124.71.227.247:3306/test?useUnicode=true&amp;characterEncoding=utf8&amp;nullCatalogMeansCurrent=true&amp;serverTimezone=Asia/Shanghai">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" userId="root" password="thinksky@336"
+                        connectionURL="jdbc:mysql://localhost:3306/cyl_web?useUnicode=true&amp;characterEncoding=utf8&amp;nullCatalogMeansCurrent=true&amp;serverTimezone=Asia/Shanghai">
         </jdbcConnection>
         <javaModelGenerator targetPackage="com.dfm.boot.example.domain" targetProject="src/main/java"/>
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/mybatis"/>
         <javaClientGenerator targetPackage="com.dfm.boot.example.mappers" targetProject="src/main/java" type="XMLMAPPER"/>
 
 <!--        <table tableName="gov_mapping" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
-        <table tableName="repository" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
+<!--        <table tableName="repository" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+<!--        <table tableName="cyl_roster_all" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+<!--        <table tableName="gf_roster" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
+<!--        <table tableName="zs_roster" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>-->
 
+                <table tableName="jd_apply_record" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
 
 
 
